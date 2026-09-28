@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Raw app bundle — only the zipped version is served/committed
+downloads/Spwrite.app/

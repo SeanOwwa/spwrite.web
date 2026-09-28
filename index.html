@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spwrite — A calm, distraction-free writing app</title>
+  <meta name="description" content="Spwrite is a calm, distraction-free writing app for your own computer. Organize work into projects, folders, and documents, and write in a clean manuscript editor. Everything saves on your machine and works offline." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <img src="assets/logo.svg" alt="Spwrite logo" width="28" height="28" />
+        <span>Spwrite</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+        <a href="https://github.com/seanless/spwrite" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <span class="badge">Free &amp; open source · Works offline</span>
+        <h1>A calm place<br />to write.</h1>
+        <p class="lead">
+          Spwrite is a distraction-free writing app for your own computer.
+          Organize your work into projects, folders, and documents, and write in
+          a clean manuscript editor. Everything is saved on your machine — always
+          with you, always offline.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#download">Get Spwrite</a>
+          <a class="btn btn-ghost" href="https://github.com/seanless/spwrite" target="_blank" rel="noopener">View source</a>
+        </div>
+        <p class="detected" id="detected"></p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2>What it looks like</h2>
+        <p class="section-sub">Designed to stay out of your way for long writing sessions.</p>
+        <div class="grid">
+          <div class="card">
+            <div class="icon">📖</div>
+            <h3>Manuscript editor</h3>
+            <p>Classic serif type, double-spaced — the same standard as a Google Docs manuscript, easy on the eyes and easy to mark up.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🔢</div>
+            <h3>Live word count</h3>
+            <p>A running word count sits in the upper-right of the document and updates as you type.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🌌</div>
+            <h3>Deep navy theme</h3>
+            <p>A dark navy workspace with dark-cyan highlights and a soft gradient backdrop, gentle for late-night drafts.</p>
+          </div>
+          <div class="card">
+            <div class="icon">✨</div>
+            <h3>Tactile interface</h3>
+            <p>Rounded cards with subtle depth, project tiles that lift on hover with colorful initial badges, and pill-shaped controls throughout.</p>
+          </div>
+        </div>
+
+        <h2 style="margin-top:64px;">What you can do</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="icon">🗂️</div>
+            <h3>Projects &amp; folders</h3>
+            <p>Keep separate projects for different books, articles, or clients, and sort each into folders and documents.</p>
+          </div>
+          <div class="card">
+            <div class="icon">✋</div>
+            <h3>Drag to organize</h3>
+            <p>Grab the handle on any row to reorder. Drop a document into a folder, back out to the top level, or between folders.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🅱️</div>
+            <h3>Format as you write</h3>
+            <p>Bold, italic, headings, lists, and links. Tab drops a clean 10-space indent right where your cursor is.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📄</div>
+            <h3>Export to Word</h3>
+            <p>Send any selection of documents to a single .docx — each title a heading, each document starting on a new page.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🎭</div>
+            <h3>Character panel</h3>
+            <p>Keep your cast close: name, role, free-form details, and a portrait for each character, right beside your draft.</p>
+          </div>
+          <div class="card">
+            <div class="icon">💾</div>
+            <h3>Autosave</h3>
+            <p>No Save button to remember. A status pill shows "Saving…" as you type, then "Saved" once your text is safely on disk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download / Get it -->
+    <section id="download" class="section section-alt">
+      <div class="container">
+        <h2>Get Spwrite</h2>
+        <p class="section-sub">
+          Pick your computer and install Spwrite. Everything stays on your machine,
+          and it works offline.
+        </p>
+
+        <div class="download-grid">
+          <div class="dl-card" data-os="mac">
+            <div class="dl-os">macOS</div>
+            <p class="dl-desc">Apple Silicon &amp; Intel</p>
+            <a class="btn btn-primary btn-block" href="mac.html">Get Spwrite for Mac</a>
+            <a class="dl-source"
+               href="https://github.com/seanless/spwrite/archive/refs/heads/main.zip"
+               download>or download source</a>
+          </div>
+
+          <div class="dl-card" data-os="windows">
+            <div class="dl-os">Windows</div>
+            <p class="dl-desc">Windows 10 &amp; 11</p>
+            <a class="btn btn-primary btn-block"
+               href="https://github.com/seanless/spwrite/releases/latest/download/Spwrite-Windows-Setup.exe"
+               download>Install for Windows</a>
+            <a class="dl-source"
+               href="https://github.com/seanless/spwrite/archive/refs/heads/main.zip"
+               download>or download source</a>
+          </div>
+
+          <div class="dl-card" data-os="linux">
+            <div class="dl-os">Linux</div>
+            <p class="dl-desc">x86_64</p>
+            <a class="btn btn-primary btn-block" aria-disabled="true" tabindex="-1">Coming soon</a>
+            <span class="dl-source">AppImage on the way</span>
+          </div>
+        </div>
+
+        <p class="section-sub" style="margin-top:32px;">
+          The <strong>Download</strong> buttons grab the ready-to-run app from the
+          <a href="https://github.com/seanless/spwrite/releases/latest" target="_blank" rel="noopener">latest release</a>.
+          Prefer to build it yourself? <strong>Download source</strong> gives you the
+          full project.
+        </p>
+
+        <!-- Open on Mac -->
+        <div class="open-guide">
+          <h3>On a Mac?</h3>
+          <p class="tip-note" style="border:0;padding-top:0;margin-top:0;">
+            The <strong>Get Spwrite for Mac</strong> button opens a simple,
+            step-by-step guide: download, unzip, drag into Applications, and open —
+            no terminal, about a minute. <a href="mac.html">Open the Mac install guide →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support -->
+    <section id="support" class="section section-alt">
+      <div class="container support">
+        <h2>Support Spwrite</h2>
+        <p class="section-sub">
+          Spwrite is free and open source. If it helps you write, you can support
+          the work with a coffee — no pressure, always appreciated.
+        </p>
+        <a class="btn btn-coffee" href="https://buymeacoffee.com/seanless" target="_blank" rel="noopener">
+          ☕ Buy me a coffee
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Spwrite · Built by Seanless &amp; Kiro</span>
+      <div class="footer-links">
+        <a href="https://github.com/seanless/spwrite" target="_blank" rel="noopener">GitHub</a>
+        <a href="#download">Download</a>
+        <a href="https://buymeacoffee.com/seanless" target="_blank" rel="noopener">Coffee</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
