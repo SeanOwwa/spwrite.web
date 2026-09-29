@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spwrite — A calm, distraction-free writing app</title>
   <meta name="description" content="Spwrite is a calm, distraction-free writing app for your own computer. Organize work into projects, folders, and documents, and write in a clean manuscript editor. Everything saves on your machine and works offline." />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/spwrite_logo.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="#top">
-        <img src="assets/logo.svg" alt="Spwrite logo" width="28" height="28" />
+        <img src="assets/spwrite_logo.png" alt="Spwrite logo" width="28" height="28" />
         <span>Spwrite</span>
       </a>
       <nav class="nav-links">
         <a href="#features">Features</a>
         <a href="#download">Download</a>
         <a href="about.html">About</a>
+        <a href="https://discord.gg/KCWfmqGCNy" target="_blank" rel="noopener">Community</a>
       </nav>
     </div>
   </header>
@@ -27,7 +28,7 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
-        <span class="badge">Free to use · Works offline</span>
+        <span class="badge">Free to use · Works offline<span class="beta-tag">Beta</span></span>
         <h1>A calm place<br />to write.</h1>
         <p class="lead">
           Spwrite is a distraction-free writing app for your own computer.
@@ -109,10 +110,17 @@
     <!-- Download / Get it -->
     <section id="download" class="section section-alt">
       <div class="container">
-        <h2>Get Spwrite</h2>
+        <h2>Get Spwrite <span class="beta-tag">Beta</span></h2>
         <p class="section-sub">
           Pick your computer and install Spwrite. Everything stays on your machine,
           and it works offline.
+        </p>
+
+        <p class="beta-note">
+          <strong>Spwrite is in beta.</strong> It's stable enough for everyday writing,
+          but you may hit the occasional rough edge. New builds ship
+          <strong>every two weeks</strong>, so features and fixes land often — grab the
+          latest whenever you like.
         </p>
 
         <div class="download-grid">
@@ -164,6 +172,21 @@
       </div>
     </section>
 
+    <!-- Community -->
+    <section id="community" class="section">
+      <div class="container support">
+        <h2>Join the community</h2>
+        <p class="section-sub">
+          Spwrite is in active beta with a new build every two weeks. Hop into our
+          Discord to share feedback, request features, get help, and hear about updates
+          first.
+        </p>
+        <a class="btn btn-discord" href="https://discord.gg/KCWfmqGCNy" target="_blank" rel="noopener">
+          💬 Join us on Discord
+        </a>
+      </div>
+    </section>
+
     <!-- Support -->
     <section id="support" class="section section-alt">
       <div class="container support">
@@ -185,6 +208,7 @@
       <div class="footer-links">
         <a href="about.html">About</a>
         <a href="#download">Download</a>
+        <a href="https://discord.gg/KCWfmqGCNy" target="_blank" rel="noopener">Discord</a>
         <a href="https://buymeacoffee.com/seanless" target="_blank" rel="noopener">Coffee</a>
       </div>
     </div>
