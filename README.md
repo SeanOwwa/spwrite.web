@@ -5,8 +5,8 @@ writing app built with Flutter. The site introduces the app, explains why it
 exists and who makes it, points writers to a community, and lets them download
 the ready-to-run app for their platform.
 
-Spwrite is currently in **beta**, free to use for every writer, and a new build
-ships roughly **every two weeks**.
+Spwrite is currently at **Beta v1.0.0**, free to use for every writer, and a new
+build ships roughly **every two weeks**.
 
 ## Pages
 
@@ -26,8 +26,8 @@ site serves them itself — no GitHub Release step required.
 
 | Platform | File | Status |
 | --- | --- | --- |
-| macOS | `downloads/Spwrite-macOS.zip` | Available |
-| Windows | `downloads/Spwrite.exe` | Available |
+| macOS | `downloads/Spwrite-macOS-v1.0.0.zip` | Available |
+| Windows | `downloads/Spwrite-v1.0.0.exe` | Available |
 | Linux | — | Coming soon |
 
 On the home page, the macOS and Windows cards link to their install guides
@@ -45,20 +45,23 @@ flutter build macos --release
 # the app lands at:
 #   build/macos/Build/Products/Release/Spwrite.app
 cd build/macos/Build/Products/Release
-ditto -c -k --sequesterRsrc --keepParent Spwrite.app Spwrite-macOS.zip
+ditto -c -k --sequesterRsrc --keepParent Spwrite.app Spwrite-macOS-v1.0.0.zip
 ```
 
-Copy the resulting `Spwrite-macOS.zip` into `downloads/`, replacing the old one.
+Copy the resulting zip into `downloads/`. Download files are versioned
+(`Spwrite-macOS-v1.0.0.zip`), so on each release bump the version in the filename
+and update the matching link + `download` attribute in `mac.html`.
 `--keepParent` ensures writers get `Spwrite.app` back when they unzip — matching
 the steps shown on `mac.html`.
 
 ### Updating the Windows download
 
-`Spwrite.exe` is a single self-contained file, so just drop the new build into
-`downloads/`, replacing the old one. No zipping needed.
+`Spwrite-v1.0.0.exe` is a single self-contained file, so just drop the new build
+into `downloads/`. No zipping needed. As with macOS, name it with the new version
+and update the link in `windows.html`.
 
 > Note: the raw `downloads/Spwrite.app/` bundle is ignored via `.gitignore` — only
-> the zipped `Spwrite-macOS.zip` is committed and served.
+> the zipped release (`Spwrite-macOS-v1.0.0.zip`) is committed and served.
 
 ## Community & support
 
