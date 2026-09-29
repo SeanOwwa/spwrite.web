@@ -1,79 +1,82 @@
 # Spwrite — landing page
 
 A static GitHub Pages landing page for **Spwrite**, a calm, distraction-free
-writing app built with Flutter. The page describes the app and gives writers two
-ways to get it per platform: a ready-to-run **installer** and a **source**
-download. It also has a "Buy me a coffee" support button.
+writing app built with Flutter. The site introduces the app, explains why it
+exists and who makes it, points writers to a community, and lets them download
+the ready-to-run app for their platform.
 
-## Files
+Spwrite is currently in **beta**, free to use for every writer, and a new build
+ships roughly **every two weeks**.
 
-- `index.html` — the page (hero, features, download, support)
+## Pages
+
+- `index.html` — home (hero, features, download grid, community, support)
+- `about.html` — why Spwrite exists, who builds it, and the free-to-use promise
+- `mac.html` — step-by-step macOS install guide
+- `windows.html` — step-by-step Windows install guide
 - `styles.css` — navy + dark-cyan theme matching the app
-- `script.js` — OS detection + footer year
-- `assets/` — logo and favicon
+- `script.js` — OS detection (highlights your platform's card) + footer year
+- `assets/` — logo and favicon (`spwrite_logo.png` / `.jpeg`)
+- `downloads/` — the actual app files served to visitors
 
-## How the download buttons work
+## How the downloads work
 
-Each platform card has two links.
+The app files are hosted **directly in this repo** under `downloads/`, so the
+site serves them itself — no GitHub Release step required.
 
-**1. Download (ready-to-run app)** — points at the latest GitHub Release:
+| Platform | File | Status |
+| --- | --- | --- |
+| macOS | `downloads/Spwrite-macOS.zip` | Available |
+| Windows | `downloads/Spwrite.exe` | Available |
+| Linux | — | Coming soon |
 
-```
-https://github.com/seanless/spwrite/releases/latest/download/Spwrite-macOS.zip
-https://github.com/seanless/spwrite/releases/latest/download/Spwrite-Windows-Setup.exe
-https://github.com/seanless/spwrite/releases/latest/download/Spwrite-Linux.AppImage
-```
+On the home page, the macOS and Windows cards link to their install guides
+(`mac.html` / `windows.html`), and the actual download button lives on each
+guide. Linux shows a disabled "Coming soon" state.
 
-To make these work, build the app for each platform and attach the files to a
-GitHub Release: **Releases → Draft a new release → tag it (e.g. `v1.0.0`) → drag
-the files into "Attach binaries" → Publish**. The file names you upload **must
-match** the names above, or edit the button URLs in `index.html` to match. The
-`releases/latest/download/...` links always resolve to your newest release, so
-you never have to touch the page again.
+### Updating the macOS download
 
-### Making the Mac download (`Spwrite-macOS.zip`)
-
-`Spwrite.app` is a Flutter release build — a folder bundle, so it has to be
-zipped before uploading (GitHub Releases can't take a raw `.app`). From the
-`spwrite` project:
+`Spwrite.app` is a Flutter release build — a folder bundle, so it must be zipped
+before it can be served (browsers and GitHub Pages can't download a raw `.app`).
+From the `spwrite` project:
 
 ```bash
 flutter build macos --release
 # the app lands at:
 #   build/macos/Build/Products/Release/Spwrite.app
 cd build/macos/Build/Products/Release
-zip -r -y Spwrite-macOS.zip Spwrite.app
+ditto -c -k --sequesterRsrc --keepParent Spwrite.app Spwrite-macOS.zip
 ```
 
-Upload the resulting `Spwrite-macOS.zip` to the release. Writers download it,
-double-click to unzip, and drag `Spwrite.app` into their Applications folder —
-exactly the steps shown on the dedicated Mac install page (`mac.html`).
+Copy the resulting `Spwrite-macOS.zip` into `downloads/`, replacing the old one.
+`--keepParent` ensures writers get `Spwrite.app` back when they unzip — matching
+the steps shown on `mac.html`.
 
-**2. Download source** — points at the repo's main-branch zip (GitHub builds
-this automatically, nothing to upload):
+### Updating the Windows download
 
-```
-https://github.com/seanless/spwrite/archive/refs/heads/main.zip
-```
+`Spwrite.exe` is a single self-contained file, so just drop the new build into
+`downloads/`, replacing the old one. No zipping needed.
 
-The coffee button points at `https://buymeacoffee.com/seanless`.
+> Note: the raw `downloads/Spwrite.app/` bundle is ignored via `.gitignore` — only
+> the zipped `Spwrite-macOS.zip` is committed and served.
 
-### 2. Publish with GitHub Pages
+## Community & support
 
-Option A — user site: push to a repo named `seanless.github.io`; it's served
-at `https://seanless.github.io`.
+- **Discord** — https://discord.gg/KCWfmqGCNy (linked in the nav and footer, plus
+  a "Join the community" section on the home page)
+- **Coffee** — https://buymeacoffee.com/seanless (optional; never required and
+  never unlocks anything — everything is free)
+
+## Publish with GitHub Pages
+
+Push the files, then **Settings → Pages → Deploy from a branch → main / root**.
+The site redeploys automatically on every push to `main`.
 
 ```bash
-git init
 git add .
-git commit -m "Add Spwrite landing page"
-git branch -M main
-git remote add origin https://github.com/seanless/seanless.github.io.git
-git push -u origin main
+git commit -m "Update landing page"
+git push
 ```
-
-Option B — any repo: push the files, then **Settings → Pages → Deploy from a
-branch → main / root**.
 
 ## Local preview
 
@@ -85,4 +88,4 @@ python3 -m http.server 8000
 ## Credits
 
 - **Seanless** — product direction, requirements, and review.
-- **Kiro** — implementation, tests, and tooling.
+- **Kiro** — implementation and tooling.
