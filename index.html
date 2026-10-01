@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spwrite — A calm, distraction-free writing app</title>
-  <meta name="description" content="Spwrite is a calm, distraction-free writing app for your own computer. Organize work into projects, folders, and documents, and write in a clean manuscript editor. Everything saves on your machine and works offline." />
+  <title>Spwrite — A calm, private writing app for your own computer</title>
+  <meta name="description" content="Spwrite is a calm, distraction-free writing app for macOS, Windows, and Linux. Organize your work, write in a clean manuscript editor, and get help from a private on-device AI — everything saved on your machine and working offline." />
   <link rel="icon" href="assets/spwrite_logo.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -17,8 +17,10 @@
       </a>
       <nav class="nav-links">
         <a href="#features">Features</a>
+        <a href="#ai">AI</a>
         <a href="#download">Download</a>
         <a href="about.html">About</a>
+        <a href="changelog.html">Changelog</a>
         <a href="https://discord.gg/KCWfmqGCNy" target="_blank" rel="noopener">Community</a>
       </nav>
     </div>
@@ -28,16 +30,17 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
-        <span class="badge">Free to use · Works offline<span class="beta-tag">Beta v1.0.0</span></span>
-        <h1>A calm place<br />to write.</h1>
+        <span class="badge">Free · Private · Works offline<span class="beta-tag">Beta v1.2.2</span></span>
+        <h1>Where the<br />words come.</h1>
         <p class="lead">
-          Spwrite is a distraction-free writing app for your own computer.
-          Organize your work into projects, folders, and documents, and write in
-          a clean manuscript editor. Everything is saved on your machine — always
-          with you, always offline.
+          Spwrite is a calm, distraction-free writing app for your own computer.
+          Organize books, articles, and clients into projects, write in a clean
+          manuscript editor, and lean on a private AI that actually knows your
+          story. Everything saves on your machine — always with you, always offline.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#download">Get Spwrite</a>
+          <a class="btn btn-primary" href="#download">Get Spwrite — it's free</a>
+          <a class="btn btn-ghost" href="#features">See what's inside</a>
         </div>
         <p class="detected" id="detected"></p>
       </div>
@@ -46,18 +49,18 @@
     <!-- Features -->
     <section id="features" class="section">
       <div class="container">
-        <h2>What it looks like</h2>
-        <p class="section-sub">Designed to stay out of your way for long writing sessions.</p>
+        <h2>Made for long writing sessions</h2>
+        <p class="section-sub">A workspace that stays quiet and out of your way, so the words can come.</p>
         <div class="grid">
           <div class="card">
             <div class="icon">📖</div>
             <h3>Manuscript editor</h3>
-            <p>Classic serif type, double-spaced — the same standard as a Google Docs manuscript, easy on the eyes and easy to mark up.</p>
+            <p>Classic serif type, double-spaced — the same standard as a Google Docs manuscript. Easy on the eyes and easy to mark up.</p>
           </div>
           <div class="card">
             <div class="icon">🔢</div>
             <h3>Live word count</h3>
-            <p>A running word count sits in the upper-right of the document and updates as you type.</p>
+            <p>A running word count sits in the upper-right of the document and updates as you type — progress you can feel.</p>
           </div>
           <div class="card">
             <div class="icon">🌌</div>
@@ -65,13 +68,14 @@
             <p>A dark navy workspace with dark-cyan highlights and a soft gradient backdrop, gentle for late-night drafts.</p>
           </div>
           <div class="card">
-            <div class="icon">✨</div>
-            <h3>Tactile interface</h3>
-            <p>Rounded cards with subtle depth, project tiles that lift on hover with colorful initial badges, and pill-shaped controls throughout.</p>
+            <div class="icon">🖼️</div>
+            <h3>Book-cover dashboard</h3>
+            <p>Your projects sit in a responsive grid of portrait cover cards. Give each book a cover, or keep a colorful initial badge.</p>
           </div>
         </div>
 
-        <h2 style="margin-top:64px;">What you can do</h2>
+        <h2 style="margin-top:64px;">Everything a writer reaches for</h2>
+        <p class="section-sub">The tools that matter, and not much else.</p>
         <div class="grid">
           <div class="card">
             <div class="icon">🗂️</div>
@@ -86,12 +90,12 @@
           <div class="card">
             <div class="icon">🅱️</div>
             <h3>Format as you write</h3>
-            <p>Bold, italic, headings, lists, and links. Tab drops a clean 10-space indent right where your cursor is.</p>
+            <p>Bold, italic, headings, lists, and links. Tab drops a clean 10-space indent right where your cursor is, and your blank lines stay exactly as you left them.</p>
           </div>
           <div class="card">
             <div class="icon">📄</div>
             <h3>Export to Word</h3>
-            <p>Send any selection of documents to a single .docx — each title a heading, each document starting on a new page.</p>
+            <p>Send any selection of documents to a single .docx — titles become headings, formatting carries over, and each document starts on a new page.</p>
           </div>
           <div class="card">
             <div class="icon">🎭</div>
@@ -107,10 +111,51 @@
       </div>
     </section>
 
-    <!-- Download / Get it -->
-    <section id="download" class="section section-alt">
+    <!-- On-device AI -->
+    <section id="ai" class="section section-alt">
       <div class="container">
-        <h2>Get Spwrite <span class="beta-tag">Beta v1.0.0</span></h2>
+        <h2>A writing assistant that stays private</h2>
+        <p class="section-sub">
+          Spwrite's AI runs a small language model <strong>on your own computer</strong>.
+          No account, no API key, no telemetry, no per-use cost — and your writing
+          never leaves your device.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <div class="icon">🔒</div>
+            <h3>Private by design</h3>
+            <p>Chat about your draft — brainstorm, rephrase, continue a passage, or summarize. Nothing you write is ever sent anywhere.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📚</div>
+            <h3>Knows your story</h3>
+            <p>Ask about your own project and the assistant answers from your documents and characters, showing which source it drew from.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🔎</div>
+            <h3>Semantic search</h3>
+            <p>Search a whole manuscript by meaning, not just matching words — it finds the right passage across every chapter and book.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🛜</div>
+            <h3>Offline after setup</h3>
+            <p>A one-time model download, verified for integrity, then it works with no connection at all. The app stays usable while it downloads.</p>
+          </div>
+        </div>
+
+        <p class="section-sub" style="margin-top:36px;">
+          Powered by openly licensed on-device models (Qwen2.5-1.5B-Instruct and
+          bge-small-en-v1.5, both Apache-2.0). Web research and AI image generation
+          are marked <strong>Coming soon</strong> and make no network requests today.
+        </p>
+      </div>
+    </section>
+
+    <!-- Download / Get it -->
+    <section id="download" class="section">
+      <div class="container">
+        <h2>Get Spwrite <span class="beta-tag">Beta v1.2.2</span></h2>
         <p class="section-sub">
           Pick your computer and install Spwrite. Everything stays on your machine,
           and it works offline.
@@ -123,7 +168,20 @@
           latest whenever you like.
         </p>
 
-        <div class="download-grid">
+        <!-- Mobile notice: shown only on phones/tablets via script.js -->
+        <div class="mobile-notice" id="mobile-notice" hidden>
+          <div class="mobile-notice-icon">💻</div>
+          <h3>Spwrite is a desktop app</h3>
+          <p>
+            Spwrite runs on <strong>Mac</strong> and <strong>Windows</strong> computers,
+            not phones or tablets. Open this page on your computer to download and install it.
+          </p>
+          <button type="button" class="btn btn-ghost" id="show-downloads-anyway">
+            Show downloads anyway
+          </button>
+        </div>
+
+        <div class="download-grid" id="download-grid">
           <div class="dl-card" data-os="mac">
             <div class="dl-os">macOS</div>
             <p class="dl-desc">Apple Silicon &amp; Intel</p>
@@ -173,7 +231,7 @@
     </section>
 
     <!-- Community -->
-    <section id="community" class="section">
+    <section id="community" class="section section-alt">
       <div class="container support">
         <h2>Join the community</h2>
         <p class="section-sub">
@@ -188,7 +246,7 @@
     </section>
 
     <!-- Support -->
-    <section id="support" class="section section-alt">
+    <section id="support" class="section">
       <div class="container support">
         <h2>Support Spwrite</h2>
         <p class="section-sub">
@@ -207,6 +265,7 @@
       <span>© <span id="year"></span> Spwrite · Built by Seanless &amp; Kiro</span>
       <div class="footer-links">
         <a href="about.html">About</a>
+        <a href="changelog.html">Changelog</a>
         <a href="#download">Download</a>
         <a href="https://discord.gg/KCWfmqGCNy" target="_blank" rel="noopener">Discord</a>
         <a href="https://buymeacoffee.com/seanless" target="_blank" rel="noopener">Coffee</a>

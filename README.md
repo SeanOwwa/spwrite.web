@@ -5,7 +5,7 @@ writing app built with Flutter. The site introduces the app, explains why it
 exists and who makes it, points writers to a community, and lets them download
 the ready-to-run app for their platform.
 
-Spwrite is currently at **Beta v1.0.0**, free to use for every writer, and a new
+Spwrite is currently at **Beta v1.2.2**, free to use for every writer, and a new
 build ships roughly **every two weeks**.
 
 ## Pages
@@ -26,7 +26,7 @@ site serves them itself — no GitHub Release step required.
 
 | Platform | File | Status |
 | --- | --- | --- |
-| macOS | `downloads/Spwrite-macOS-v1.0.0.zip` | Available |
+| macOS | `downloads/Spwrite-macOS-v1.2.2.zip` | Available |
 | Windows | `downloads/Spwrite-v1.0.0.exe` | Available |
 | Linux | — | Coming soon |
 
@@ -45,11 +45,11 @@ flutter build macos --release
 # the app lands at:
 #   build/macos/Build/Products/Release/Spwrite.app
 cd build/macos/Build/Products/Release
-ditto -c -k --sequesterRsrc --keepParent Spwrite.app Spwrite-macOS-v1.0.0.zip
+ditto -c -k --sequesterRsrc --keepParent Spwrite.app Spwrite-macOS-v1.2.2.zip
 ```
 
 Copy the resulting zip into `downloads/`. Download files are versioned
-(`Spwrite-macOS-v1.0.0.zip`), so on each release bump the version in the filename
+(`Spwrite-macOS-v1.2.2.zip`), so on each release bump the version in the filename
 and update the matching link + `download` attribute in `mac.html`.
 `--keepParent` ensures writers get `Spwrite.app` back when they unzip — matching
 the steps shown on `mac.html`.
@@ -61,7 +61,7 @@ into `downloads/`. No zipping needed. As with macOS, name it with the new versio
 and update the link in `windows.html`.
 
 > Note: the raw `downloads/Spwrite.app/` bundle is ignored via `.gitignore` — only
-> the zipped release (`Spwrite-macOS-v1.0.0.zip`) is committed and served.
+> the zipped release (`Spwrite-macOS-v1.2.2.zip`) is committed and served.
 
 ## Community & support
 

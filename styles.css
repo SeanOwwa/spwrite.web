@@ -132,10 +132,11 @@ a:hover { color: var(--accent-hover); }
 .beta-note strong { color: var(--text); }
 .hero h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.8rem, 6vw, 4.4rem);
-  line-height: 1.05;
+  font-size: clamp(2.8rem, 6vw, 4.6rem);
+  line-height: 1.04;
   letter-spacing: -0.02em;
   margin-bottom: 22px;
+  text-wrap: balance;
 }
 .lead {
   max-width: 620px;
@@ -203,12 +204,21 @@ a:hover { color: var(--accent-hover); }
 }
 .section h2 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 2.1rem;
+  font-size: clamp(1.9rem, 3.5vw, 2.3rem);
   text-align: center;
   margin-bottom: 12px;
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
-.section-sub { text-align: center; color: var(--muted); max-width: 620px; margin: 0 auto 40px; }
+.section-sub {
+  text-align: center;
+  color: var(--muted);
+  max-width: 660px;
+  margin: 0 auto 40px;
+  font-size: 1.05rem;
+  text-wrap: pretty;
+}
+.section-sub strong { color: var(--text); }
 .section-sub code {
   background: rgba(24, 197, 200, 0.12);
   color: var(--accent);
@@ -236,8 +246,117 @@ a:hover { color: var(--accent-hover); }
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 .card .icon { font-size: 1.8rem; margin-bottom: 14px; line-height: 1; }
-.card h3 { font-size: 1.1rem; margin-bottom: 8px; }
-.card p { color: var(--muted); font-size: 0.95rem; }
+.card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.18rem;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.card p { color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+
+/* Changelog */
+.changelog {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.changelog-status { text-align: center; color: var(--muted); }
+.changelog-status code {
+  background: rgba(24, 197, 200, 0.12);
+  color: var(--accent);
+  padding: 1px 6px;
+  border-radius: 6px;
+}
+.changelog-entry {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+}
+.changelog-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.changelog-version {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.changelog-date { color: var(--muted); font-size: 0.9rem; }
+.changelog-pill {
+  margin-left: auto;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #04141a;
+  background: var(--accent);
+}
+.changelog-body h1,
+.changelog-body h2,
+.changelog-body h3 { margin: 18px 0 8px; font-size: 1.1rem; }
+.changelog-body h1:first-child,
+.changelog-body h2:first-child,
+.changelog-body h3:first-child { margin-top: 0; }
+.changelog-body p { color: var(--muted); margin-bottom: 10px; }
+.changelog-body ul { list-style: none; margin: 8px 0 14px; }
+.changelog-body ul ul { margin: 6px 0 6px; }
+.changelog-body li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.changelog-body li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+/* Sub-bullets: smaller, hollow marker */
+.changelog-body ul ul li { font-size: 0.95em; }
+.changelog-body ul ul li::before {
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  width: 5px;
+  height: 5px;
+}
+.changelog-body strong { color: var(--text); }
+.changelog-body code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85em;
+  background: rgba(24, 197, 200, 0.12);
+  color: var(--accent);
+  padding: 1px 6px;
+  border-radius: 6px;
+}
+
+/* Mobile download notice */
+.mobile-notice {
+  max-width: 540px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 30px;
+  text-align: center;
+}
+.mobile-notice-icon { font-size: 2.4rem; margin-bottom: 10px; line-height: 1; }
+.mobile-notice h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.mobile-notice p { color: var(--muted); margin-bottom: 22px; }
 
 /* Download */
 .download-grid {

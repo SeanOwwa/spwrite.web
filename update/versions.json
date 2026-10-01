@@ -1,0 +1,20 @@
+{
+  "versions": [
+    {
+      "version": "Beta v1.2.2",
+      "date": "October 1, 2026",
+      "tag": "Latest",
+      "file": "v1.2.2.md"
+    },
+    {
+      "version": "Beta v1.2.1",
+      "date": "October 1, 2026",
+      "file": "v1.2.1.md"
+    },
+    {
+      "version": "Beta v1.0.0",
+      "date": "September 2026",
+      "file": "v1.0.0.md"
+    }
+  ]
+}
