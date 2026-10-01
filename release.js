@@ -81,6 +81,7 @@
       var bits = [];
       if (info.version) bits.push('<span class="dl-ver">' + info.version + "</span>");
       var sub = [];
+      if (info.arch) sub.push(info.arch);
       if (info.size) sub.push(humanSize(info.size));
       if (info.date) sub.push(info.date);
       if (sub.length) bits.push('<span class="dl-sub">' + sub.join(" · ") + "</span>");

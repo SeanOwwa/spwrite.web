@@ -3,3 +3,6 @@
 
 # Raw app bundle — only the zipped version is served/committed
 downloads/Spwrite.app/
+
+# Raw Linux build bundle — only the zipped release is served/committed
+downloads/linux_app/

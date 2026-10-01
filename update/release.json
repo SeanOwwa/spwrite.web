@@ -4,6 +4,7 @@
     "mac": {
       "available": true,
       "version": "Beta v1.2.2",
+      "arch": "Apple Silicon (ARM64)",
       "date": "October 1, 2026",
       "file": "downloads/Spwrite-macOS-v1.2.2.zip",
       "fileName": "Spwrite-macOS-v1.2.2.zip",
@@ -13,6 +14,7 @@
     "windows": {
       "available": true,
       "version": "Beta v1.0.0",
+      "arch": "ARM64",
       "date": "September 2026",
       "file": "downloads/Spwrite-v1.0.0.exe",
       "fileName": "Spwrite-v1.0.0.exe",
@@ -20,13 +22,14 @@
       "sha256": "9b89ac3ca64b15f0181325146ac8c1aba7148b5e6d4ab47e78739610a7f90d94"
     },
     "linux": {
-      "available": false,
-      "version": null,
-      "date": null,
-      "file": null,
-      "fileName": null,
-      "size": null,
-      "sha256": null
+      "available": true,
+      "version": "Beta v1.2.2",
+      "arch": "Debian-based · ARM64",
+      "date": "October 1, 2026",
+      "file": "downloads/Spwrite-Linux-v1.2.2.zip",
+      "fileName": "Spwrite-Linux-v1.2.2.zip",
+      "size": 18874502,
+      "sha256": "5b743826868d69e498084242bea4714745798833462d0acdf8d4eca6ac31f4c6"
     }
   }
 }
