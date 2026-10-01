@@ -29,16 +29,17 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
-        <span class="badge">Windows 10 &amp; 11 · 64-bit<span class="beta-tag">Beta v1.2.2</span></span>
+        <span class="badge">Windows 10 &amp; 11 · 64-bit<span class="beta-tag" data-platform-version="windows">Beta v1.0.0</span></span>
         <h1>Install Spwrite<br />on your PC</h1>
         <p class="lead">
           No installer wizard, no accounts, nothing technical. Download one file,
           double-click it, and you're writing. Takes about a minute.
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary"
+        <div class="hero-actions" data-release="windows">
+          <a class="btn btn-primary dl-btn"
              href="downloads/Spwrite-v1.0.0.exe"
              download="Spwrite-v1.0.0.exe">⬇ Download Spwrite for Windows</a>
+          <div class="dl-meta dl-meta-center"></div>
         </div>
         <p class="detected">Free · Works offline · Everything saves on your PC</p>
       </div>
@@ -143,10 +144,11 @@
           </div>
         </div>
 
-        <div class="support" style="margin-top:48px;">
-          <a class="btn btn-primary"
+        <div class="support" style="margin-top:48px;" data-release="windows">
+          <a class="btn btn-primary dl-btn"
              href="downloads/Spwrite-v1.0.0.exe"
              download="Spwrite-v1.0.0.exe">⬇ Download Spwrite for Windows</a>
+          <div class="dl-meta dl-meta-center"></div>
           <p class="detected" style="margin-top:16px;">
             On Mac or Linux? <a href="index.html#download">See all downloads</a>.
           </p>
@@ -169,5 +171,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="release.js"></script>
 </body>
 </html>

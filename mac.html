@@ -29,16 +29,17 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
-        <span class="badge">macOS · Apple Silicon &amp; Intel<span class="beta-tag">Beta v1.2.2</span></span>
+        <span class="badge">macOS · Apple Silicon &amp; Intel<span class="beta-tag" data-app-version>Beta v1.2.2</span></span>
         <h1>Install Spwrite<br />on your Mac</h1>
         <p class="lead">
           No terminal, no accounts, nothing technical. Download one file, drag it
           into Applications, and you're writing. Takes about a minute.
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary"
+        <div class="hero-actions" data-release="mac">
+          <a class="btn btn-primary dl-btn"
              href="downloads/Spwrite-macOS-v1.2.2.zip"
              download="Spwrite-macOS-v1.2.2.zip">⬇ Download Spwrite for Mac</a>
+          <div class="dl-meta dl-meta-center"></div>
         </div>
         <p class="detected">Free · Works offline · Everything saves on your Mac</p>
       </div>
@@ -153,10 +154,11 @@
           </div>
         </div>
 
-        <div class="support" style="margin-top:48px;">
-          <a class="btn btn-primary"
+        <div class="support" style="margin-top:48px;" data-release="mac">
+          <a class="btn btn-primary dl-btn"
              href="downloads/Spwrite-macOS-v1.2.2.zip"
              download="Spwrite-macOS-v1.2.2.zip">⬇ Download Spwrite for Mac</a>
+          <div class="dl-meta dl-meta-center"></div>
           <p class="detected" style="margin-top:16px;">
             On Windows or Linux? <a href="index.html#download">See all downloads</a>.
           </p>
@@ -179,5 +181,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="release.js"></script>
 </body>
 </html>

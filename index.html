@@ -30,7 +30,7 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
-        <span class="badge">Free · Private · Works offline<span class="beta-tag">Beta v1.2.2</span></span>
+        <span class="badge">Free · Private · Works offline<span class="beta-tag" data-app-version>Beta v1.2.2</span></span>
         <h1>Where the<br />words come.</h1>
         <p class="lead">
           Spwrite is a calm, distraction-free writing app for your own computer.
@@ -155,7 +155,7 @@
     <!-- Download / Get it -->
     <section id="download" class="section">
       <div class="container">
-        <h2>Get Spwrite <span class="beta-tag">Beta v1.2.2</span></h2>
+        <h2>Get Spwrite <span class="beta-tag" data-app-version>Beta v1.2.2</span></h2>
         <p class="section-sub">
           Pick your computer and install Spwrite. Everything stays on your machine,
           and it works offline.
@@ -182,22 +182,24 @@
         </div>
 
         <div class="download-grid" id="download-grid">
-          <div class="dl-card" data-os="mac">
+          <div class="dl-card" data-os="mac" data-release="mac">
             <div class="dl-os">macOS</div>
             <p class="dl-desc">Apple Silicon &amp; Intel</p>
             <a class="btn btn-primary btn-block" href="mac.html">Get Spwrite for Mac</a>
+            <div class="dl-meta"></div>
           </div>
 
-          <div class="dl-card" data-os="windows">
+          <div class="dl-card" data-os="windows" data-release="windows">
             <div class="dl-os">Windows</div>
             <p class="dl-desc">Windows 10 &amp; 11</p>
             <a class="btn btn-primary btn-block" href="windows.html">Get Spwrite for Windows</a>
+            <div class="dl-meta"></div>
           </div>
 
-          <div class="dl-card" data-os="linux">
+          <div class="dl-card" data-os="linux" data-release="linux">
             <div class="dl-os">Linux</div>
             <p class="dl-desc">x86_64</p>
-            <a class="btn btn-primary btn-block" aria-disabled="true" tabindex="-1">Coming soon</a>
+            <a class="btn btn-primary btn-block dl-btn" aria-disabled="true" tabindex="-1">Coming soon</a>
             <span class="dl-source">AppImage on the way</span>
           </div>
         </div>
@@ -274,5 +276,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="release.js"></script>
 </body>
 </html>

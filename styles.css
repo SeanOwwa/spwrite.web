@@ -386,6 +386,27 @@ a:hover { color: var(--accent-hover); }
   color: var(--muted);
 }
 .dl-source:hover { color: var(--accent); }
+
+/* Release meta (version · size · date · checksum) */
+.dl-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.dl-meta:empty { display: none; }
+.dl-meta-center { align-items: center; text-align: center; margin-top: 14px; }
+.dl-ver { color: var(--accent); font-weight: 600; letter-spacing: 0.01em; }
+.dl-sub { color: var(--muted); }
+.dl-hash {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.74rem;
+  color: var(--muted);
+  opacity: 0.75;
+  cursor: help;
+}
 /* Open guide */
 .open-guide {
   max-width: 640px;

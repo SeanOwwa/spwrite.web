@@ -1,0 +1,32 @@
+{
+  "appVersion": "Beta v1.2.2",
+  "platforms": {
+    "mac": {
+      "available": true,
+      "version": "Beta v1.2.2",
+      "date": "October 1, 2026",
+      "file": "downloads/Spwrite-macOS-v1.2.2.zip",
+      "fileName": "Spwrite-macOS-v1.2.2.zip",
+      "size": 32513477,
+      "sha256": "de4b8a8337261a3a6fc7651049aea205e1041885deedd9ddeb664edf57262346"
+    },
+    "windows": {
+      "available": true,
+      "version": "Beta v1.0.0",
+      "date": "September 2026",
+      "file": "downloads/Spwrite-v1.0.0.exe",
+      "fileName": "Spwrite-v1.0.0.exe",
+      "size": 59904,
+      "sha256": "9b89ac3ca64b15f0181325146ac8c1aba7148b5e6d4ab47e78739610a7f90d94"
+    },
+    "linux": {
+      "available": false,
+      "version": null,
+      "date": null,
+      "file": null,
+      "fileName": null,
+      "size": null,
+      "sha256": null
+    }
+  }
+}
