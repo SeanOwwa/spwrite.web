@@ -1,8 +1,9 @@
 # macOS
 .DS_Store
 
-# Raw app bundle — only the zipped version is served/committed
+# Raw build bundles — only the zipped releases are served/committed
 downloads/Spwrite.app/
-
-# Raw Linux build bundle — only the zipped release is served/committed
 downloads/linux_app/
+downloads/Spwrite.app1.2.3/
+downloads/win1.2.3/
+downloads/linux1.2.3/

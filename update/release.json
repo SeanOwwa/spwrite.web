@@ -1,35 +1,35 @@
 {
-  "appVersion": "Beta v1.2.2",
+  "appVersion": "Beta v1.2.3",
   "platforms": {
     "mac": {
       "available": true,
-      "version": "Beta v1.2.2",
+      "version": "Beta v1.2.3",
       "arch": "Apple Silicon (ARM64)",
-      "date": "October 1, 2026",
-      "file": "downloads/Spwrite-macOS-v1.2.2.zip",
-      "fileName": "Spwrite-macOS-v1.2.2.zip",
-      "size": 32513477,
-      "sha256": "de4b8a8337261a3a6fc7651049aea205e1041885deedd9ddeb664edf57262346"
+      "date": "October 2, 2026",
+      "file": "downloads/Spwrite-macOS-v1.2.3.zip",
+      "fileName": "Spwrite-macOS-v1.2.3.zip",
+      "size": 32523107,
+      "sha256": "33a83d17d0435b353adcb1cb01cc429c2fe733132eae295a2f0676d72dfd3017"
     },
     "windows": {
       "available": true,
-      "version": "Beta v1.0.0",
-      "arch": "ARM64",
-      "date": "September 2026",
-      "file": "downloads/Spwrite-v1.0.0.exe",
-      "fileName": "Spwrite-v1.0.0.exe",
-      "size": 59904,
-      "sha256": "9b89ac3ca64b15f0181325146ac8c1aba7148b5e6d4ab47e78739610a7f90d94"
+      "version": "Beta v1.2.3",
+      "arch": "Windows 11 · ARM64",
+      "date": "October 2, 2026",
+      "file": "downloads/Spwrite-Windows-v1.2.3.zip",
+      "fileName": "Spwrite-Windows-v1.2.3.zip",
+      "size": 19409080,
+      "sha256": "c947c82802911eaf19ea0efdfb39f607d00eaee2d9bf207126564697d5d0f938"
     },
     "linux": {
       "available": true,
-      "version": "Beta v1.2.2",
+      "version": "Beta v1.2.3",
       "arch": "Debian-based · ARM64",
-      "date": "October 1, 2026",
-      "file": "downloads/Spwrite-Linux-v1.2.2.zip",
-      "fileName": "Spwrite-Linux-v1.2.2.zip",
-      "size": 18874502,
-      "sha256": "5b743826868d69e498084242bea4714745798833462d0acdf8d4eca6ac31f4c6"
+      "date": "October 2, 2026",
+      "file": "downloads/Spwrite-Linux-v1.2.3.zip",
+      "fileName": "Spwrite-Linux-v1.2.3.zip",
+      "size": 18873822,
+      "sha256": "2359cc5e3e508f4eae2cf4fdc327730160f37609be8510d42cdbb9cdbac40bc2"
     }
   }
 }

@@ -5,7 +5,7 @@ writing app built with Flutter. The site introduces the app, explains why it
 exists and who makes it, points writers to a community, and lets them download
 the ready-to-run app for their platform.
 
-Spwrite is currently at **Beta v1.2.2**, free to use for every writer, and a new
+Spwrite is currently at **Beta v1.2.3**, free to use for every writer, and a new
 build ships roughly **every two weeks**.
 
 ## Pages
@@ -24,15 +24,17 @@ build ships roughly **every two weeks**.
 The app files are hosted **directly in this repo** under `downloads/`, so the
 site serves them itself — no GitHub Release step required.
 
-| Platform | File | Status |
-| --- | --- | --- |
-| macOS | `downloads/Spwrite-macOS-v1.2.2.zip` | Available |
-| Windows | `downloads/Spwrite-v1.0.0.exe` | Available |
-| Linux | — | Coming soon |
+| Platform | Arch | File | Status |
+| --- | --- | --- | --- |
+| macOS | Apple Silicon (ARM64) | `downloads/Spwrite-macOS-v1.2.3.zip` | Available |
+| Windows | Windows 11 · ARM64 | `downloads/Spwrite-Windows-v1.2.3.zip` | Available |
+| Linux | Debian-based · ARM64 | `downloads/Spwrite-Linux-v1.2.3.zip` | Available |
 
-On the home page, the macOS and Windows cards link to their install guides
-(`mac.html` / `windows.html`), and the actual download button lives on each
-guide. Linux shows a disabled "Coming soon" state.
+All builds are **ARM64**. The home-page cards link to each platform's install
+guide (`mac.html` / `windows.html` / `linux.html`), where the actual download
+button lives. The single source of truth for versions, file names, sizes, and
+checksums is `update/release.json` — update a platform's entry there (and drop the
+file in `downloads/`) and every page updates automatically.
 
 ### Updating the macOS download
 

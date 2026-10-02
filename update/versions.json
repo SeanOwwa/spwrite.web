@@ -1,9 +1,14 @@
 {
   "versions": [
     {
-      "version": "Beta v1.2.2",
+      "version": "Beta v1.2.3",
       "date": "October 1, 2026",
       "tag": "Latest",
+      "file": "v1.2.3.md"
+    },
+    {
+      "version": "Beta v1.2.2",
+      "date": "October 1, 2026",
       "file": "v1.2.2.md"
     },
     {
