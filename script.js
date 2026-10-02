@@ -3,41 +3,54 @@ var yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // Mobile nav: hamburger toggles the links dropdown
-(function navToggle() {
+function initNavToggle() {
   var toggle = document.querySelector(".nav-toggle");
   var links = document.getElementById("nav-links");
   if (!toggle || !links) return;
+  if (toggle.dataset.bound === "1") return; // avoid double-binding
+  toggle.dataset.bound = "1";
 
-  function close() {
+  function closeMenu() {
     links.classList.remove("open");
     toggle.setAttribute("aria-expanded", "false");
   }
-  function open() {
+  function openMenu() {
     links.classList.add("open");
     toggle.setAttribute("aria-expanded", "true");
   }
 
+  // Use the button's click (fires for taps and clicks on the inner bars too)
   toggle.addEventListener("click", function (e) {
+    e.preventDefault();
     e.stopPropagation();
-    if (links.classList.contains("open")) close();
-    else open();
+    if (links.classList.contains("open")) closeMenu();
+    else openMenu();
   });
 
   // Close when a menu link is tapped
   links.addEventListener("click", function (e) {
-    if (e.target.tagName === "A") close();
+    var t = e.target;
+    if (t && t.closest && t.closest("a")) closeMenu();
   });
 
-  // Close when tapping outside the nav
+  // Close when tapping/clicking outside the nav
   document.addEventListener("click", function (e) {
-    if (links.classList.contains("open") && !e.target.closest(".nav-inner")) close();
+    if (!links.classList.contains("open")) return;
+    if (!e.target.closest || !e.target.closest(".nav-inner")) closeMenu();
   });
 
   // Close on Escape
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") close();
+    if (e.key === "Escape") closeMenu();
   });
-})();
+}
+
+// Run now if the DOM is ready, otherwise wait for it.
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initNavToggle);
+} else {
+  initNavToggle();
+}
 
 // Is the visitor on a phone or tablet? Spwrite is a desktop-only app.
 function isMobileDevice() {

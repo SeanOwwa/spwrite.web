@@ -97,7 +97,8 @@
               <h3>Run it and start writing</h3>
               <p>Double-click <strong>spwrite</strong>, or run <code>./spwrite</code> from
                 the terminal in that folder. That's the whole "installation" — Spwrite is a
-                self-contained app. Want it in your menu? See the tip just below.</p>
+                self-contained app. To get a clickable shortcut in your apps menu, follow
+                the quick steps just below.</p>
             </div>
           </div>
         </div>
@@ -108,15 +109,22 @@
     <section class="section section-alt">
       <div class="container">
         <div class="open-guide">
-          <h3>Keep Spwrite in your app menu (optional)</h3>
-          <ol class="open-steps">
+          <h3>Make a shortcut in your apps menu</h3>
+          <p class="tip-note" style="border:0;padding-top:0;margin-top:0;">
+            So Spwrite shows up alongside your other apps and launches with one click:
+          </p>
+          <ol class="open-steps" style="margin-top:14px;">
             <li>Move the <strong>linux_app</strong> folder somewhere permanent, for example
               <code>~/Applications/spwrite</code>.</li>
-            <li>Create a file at
-              <code>~/.local/share/applications/spwrite.desktop</code> with an
-              <code>Exec=</code> line pointing at the <code>spwrite</code> program in that
-              folder.</li>
-            <li>Save it, and Spwrite shows up in your applications menu like any other app.</li>
+            <li>Create a shortcut file by running this in a terminal (it points the menu at
+              the app in that folder):
+              <br />
+              <code>mkdir -p ~/.local/share/applications &amp;&amp; cat &gt; ~/.local/share/applications/spwrite.desktop &lt;&lt;'EOF'<br />[Desktop Entry]<br />Type=Application<br />Name=Spwrite<br />Comment=Calm, distraction-free writing<br />Exec=/home/USERNAME/Applications/spwrite/spwrite<br />Icon=/home/USERNAME/Applications/spwrite/data/flutter_assets/assets/images/spwrite_logo.png<br />Terminal=false<br />Categories=Office;WordProcessor;<br />EOF</code>
+            </li>
+            <li>Replace <code>USERNAME</code> with your username (or edit the two paths to
+              wherever you put the folder), then save.</li>
+            <li>Spwrite now appears in your applications menu. You can also right-click it
+              there and add it to favorites or the dock.</li>
           </ol>
           <p class="tip-note">
             If your desktop warns that the file is from an unknown source, that's expected
