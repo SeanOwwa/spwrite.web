@@ -2,6 +2,43 @@
 var yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// Mobile nav: hamburger toggles the links dropdown
+(function navToggle() {
+  var toggle = document.querySelector(".nav-toggle");
+  var links = document.getElementById("nav-links");
+  if (!toggle || !links) return;
+
+  function close() {
+    links.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+  function open() {
+    links.classList.add("open");
+    toggle.setAttribute("aria-expanded", "true");
+  }
+
+  toggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (links.classList.contains("open")) close();
+    else open();
+  });
+
+  // Close when a menu link is tapped
+  links.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") close();
+  });
+
+  // Close when tapping outside the nav
+  document.addEventListener("click", function (e) {
+    if (links.classList.contains("open") && !e.target.closest(".nav-inner")) close();
+  });
+
+  // Close on Escape
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") close();
+  });
+})();
+
 // Is the visitor on a phone or tablet? Spwrite is a desktop-only app.
 function isMobileDevice() {
   var ua = navigator.userAgent || "";

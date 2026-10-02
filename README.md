@@ -10,14 +10,17 @@ build ships roughly **every two weeks**.
 
 ## Pages
 
-- `index.html` — home (hero, features, download grid, community, support)
+- `index.html` — home (hero, features, on-device AI, download grid, community, support)
 - `about.html` — why Spwrite exists, who builds it, and the free-to-use promise
-- `mac.html` — step-by-step macOS install guide
-- `windows.html` — step-by-step Windows install guide
+- `mac.html` / `windows.html` / `linux.html` — step-by-step per-platform install guides
+- `changelog.html` — release notes, rendered from `update/`
 - `styles.css` — navy + dark-cyan theme matching the app
-- `script.js` — OS detection (highlights your platform's card) + footer year
-- `assets/` — logo and favicon (`spwrite_logo.png` / `.jpeg`)
+- `script.js` — OS detection, mobile nav toggle, mobile download gate, footer year
+- `release.js` — fills download links/labels/sizes/checksums from `update/release.json`
+- `changelog.js` — renders the changelog from `update/versions.json` + markdown files
+- `assets/` — logo and favicon
 - `downloads/` — the actual app files served to visitors
+- `update/` — release manifest (`release.json`), changelog manifest (`versions.json`), and per-version notes
 
 ## How the downloads work
 
@@ -36,34 +39,44 @@ button lives. The single source of truth for versions, file names, sizes, and
 checksums is `update/release.json` — update a platform's entry there (and drop the
 file in `downloads/`) and every page updates automatically.
 
-### Updating the macOS download
+### Releasing a new build
 
-`Spwrite.app` is a Flutter release build — a folder bundle, so it must be zipped
-before it can be served (browsers and GitHub Pages can't download a raw `.app`).
-From the `spwrite` project:
+Every platform ships as a **versioned `.zip`** (macOS `.app`, the Linux bundle,
+and the Windows folder — which includes the Visual C++ runtime DLLs so it runs on
+a fresh PC). Zip each with its parent folder so it unpacks cleanly:
 
 ```bash
-flutter build macos --release
-# the app lands at:
-#   build/macos/Build/Products/Release/Spwrite.app
-cd build/macos/Build/Products/Release
-ditto -c -k --sequesterRsrc --keepParent Spwrite.app Spwrite-macOS-v1.2.2.zip
+ditto -c -k --sequesterRsrc --keepParent Spwrite.app  Spwrite-macOS-v1.2.3.zip
+ditto -c -k --sequesterRsrc --keepParent Spwrite      Spwrite-Windows-v1.2.3.zip
+ditto -c -k --sequesterRsrc --keepParent linux_app    Spwrite-Linux-v1.2.3.zip
 ```
 
-Copy the resulting zip into `downloads/`. Download files are versioned
-(`Spwrite-macOS-v1.2.2.zip`), so on each release bump the version in the filename
-and update the matching link + `download` attribute in `mac.html`.
-`--keepParent` ensures writers get `Spwrite.app` back when they unzip — matching
-the steps shown on `mac.html`.
+Then, for each platform:
 
-### Updating the Windows download
+1. Drop the `.zip` in `downloads/`.
+2. Get its size and checksum: `stat -f %z <file>` and `shasum -a 256 <file>`.
+3. Update that platform's entry (version, date, file, fileName, size, sha256) in
+   `update/release.json`, and bump `appVersion` if the whole app changed.
+4. Add a changelog note in `update/` and list it in `update/versions.json`.
 
-`Spwrite-v1.0.0.exe` is a single self-contained file, so just drop the new build
-into `downloads/`. No zipping needed. As with macOS, name it with the new version
-and update the link in `windows.html`.
+`update/release.json` is the single source of truth — `release.js` reads it and
+updates every download link, version label, size, and checksum across the site.
 
-> Note: the raw `downloads/Spwrite.app/` bundle is ignored via `.gitignore` — only
-> the zipped release (`Spwrite-macOS-v1.2.2.zip`) is committed and served.
+> Note: raw build folders (`downloads/Spwrite.app/`, `linux_app/`, and the staged
+> build folders) are ignored via `.gitignore` — only the zipped releases are
+> committed and served.
+
+## Analytics
+
+The site uses [GoatCounter](https://seanless.goatcounter.com) for privacy-friendly,
+cookie-free analytics. The counter script is included on every page, and download
+buttons fire a GoatCounter **event** per platform/version (paths like
+`download/mac/Beta-v1.2.3`), so download clicks can be tracked alongside page views.
+
+- Dashboard: https://seanless.goatcounter.com
+- GitHub Pages has no built-in analytics, so this is how views and downloads are measured.
+- Counts come only from the **live site** (not local previews), and your own visits
+  can be excluded via GoatCounter's ignore setting.
 
 ## Community & support
 

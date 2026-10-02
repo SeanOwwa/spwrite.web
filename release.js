@@ -75,6 +75,17 @@
     if (btn) {
       btn.setAttribute("href", info.file);
       btn.setAttribute("download", info.fileName);
+
+      // Count the download as a GoatCounter event (one path per platform/version)
+      btn.addEventListener("click", function () {
+        if (window.goatcounter && window.goatcounter.count) {
+          window.goatcounter.count({
+            path: "download/" + os + "/" + (info.version || "").replace(/\s+/g, "-"),
+            title: "Download " + os + " " + (info.version || ""),
+            event: true
+          });
+        }
+      });
     }
 
     if (meta) {
