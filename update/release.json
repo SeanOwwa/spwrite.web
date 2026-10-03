@@ -1,35 +1,45 @@
 {
-  "appVersion": "Beta v1.2.3",
+  "appVersion": "Beta v1.3.6",
   "platforms": {
     "mac": {
       "available": true,
-      "version": "Beta v1.2.3",
+      "version": "Beta v1.3.6",
       "arch": "Apple Silicon (ARM64)",
-      "date": "October 2, 2026",
-      "file": "downloads/Spwrite-macOS-v1.2.3.zip",
-      "fileName": "Spwrite-macOS-v1.2.3.zip",
-      "size": 32523107,
-      "sha256": "33a83d17d0435b353adcb1cb01cc429c2fe733132eae295a2f0676d72dfd3017"
+      "date": "October 3, 2026",
+      "file": "downloads/Spwrite-macOS-v1.3.6.zip",
+      "fileName": "Spwrite-macOS-v1.3.6.zip",
+      "size": 32243902,
+      "sha256": "ca1a1aa6455417a41b1a95095b64f209d45998768121c783d2be14fabd618149"
     },
     "windows": {
       "available": true,
-      "version": "Beta v1.2.3",
-      "arch": "Windows 11 · ARM64",
-      "date": "October 2, 2026",
-      "file": "downloads/Spwrite-Windows-v1.2.3.zip",
-      "fileName": "Spwrite-Windows-v1.2.3.zip",
-      "size": 19409080,
-      "sha256": "c947c82802911eaf19ea0efdfb39f607d00eaee2d9bf207126564697d5d0f938"
+      "version": "Beta v1.3.6",
+      "arch": "Windows 10 and 11 · x64",
+      "date": "October 3, 2026",
+      "file": "downloads/Spwrite-Windows-v1.3.6.zip",
+      "fileName": "Spwrite-Windows-v1.3.6.zip",
+      "size": 19869804,
+      "sha256": "78732a4897c7dea1cec9bef09960117fc3dfcb5b038d391bc4493d889faceef8"
     },
     "linux": {
       "available": true,
-      "version": "Beta v1.2.3",
+      "version": "Beta v1.3.6",
       "arch": "Debian-based · ARM64",
-      "date": "October 2, 2026",
-      "file": "downloads/Spwrite-Linux-v1.2.3.zip",
-      "fileName": "Spwrite-Linux-v1.2.3.zip",
-      "size": 18873822,
-      "sha256": "2359cc5e3e508f4eae2cf4fdc327730160f37609be8510d42cdbb9cdbac40bc2"
+      "date": "October 3, 2026",
+      "file": "downloads/Spwrite-Linux-v1.3.6.zip",
+      "fileName": "Spwrite-Linux-v1.3.6.zip",
+      "size": 18744536,
+      "sha256": "d73373e0c9f9be17006aba36ccc558a1211bd9f008325ab8a7720d66cc7ae86a"
+    },
+    "linux-x64": {
+      "arch": "Debian-based · x64",
+      "available": true,
+      "version": "Beta v1.3.6",
+      "date": "October 3, 2026",
+      "file": "downloads/Spwrite-Linux-x64-v1.3.6.zip",
+      "fileName": "Spwrite-Linux-x64-v1.3.6.zip",
+      "size": 19484943,
+      "sha256": "9c0d0ea541f3f25dd5e3fb8438eef23fe4ba2982fe65d84c4077aa9bf7aeb772"
     }
   }
 }
