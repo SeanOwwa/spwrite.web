@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spwrite — A calm, private writing app for your own computer</title>
-  <meta name="description" content="Spwrite is a calm, distraction-free writing app for macOS, Windows, and Linux. Organize your work, write in a clean manuscript editor, and get help from a private on-device AI — everything saved on your machine and working offline." />
+  <title>Spwrite — A calm writing app for long work</title>
+  <meta name="description" content="Spwrite is a calm writing app for long work: novels, scripts, essays and notes. It runs on your own computer, works offline, and keeps your writing private. No account, nothing to pay. For macOS, Windows, and Linux." />
   <link rel="icon" href="assets/spwrite_logo.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -20,7 +20,6 @@
       </button>
       <nav class="nav-links" id="nav-links">
         <a href="#features">Features</a>
-        <a href="#ai">AI</a>
         <a href="#download">Download</a>
         <a href="about.html">About</a>
         <a href="changelog.html">Changelog</a>
@@ -34,12 +33,11 @@
     <section class="hero">
       <div class="container hero-inner">
         <span class="badge">Free · Private · Works offline<span class="beta-tag" data-app-version>Beta v1.2.3</span></span>
-        <h1>Where the<br />words come.</h1>
+        <h1>A calm place<br />for long work.</h1>
         <p class="lead">
-          Spwrite is a calm, distraction-free writing app for your own computer.
-          Organize books, articles, and clients into projects, write in a clean
-          manuscript editor, and lean on a private AI that actually knows your
-          story. Everything saves on your machine — always with you, always offline.
+          Spwrite is a calm writing app for long work — novels, scripts, essays,
+          and notes. It runs on your own computer, works offline, and keeps your
+          writing private. There's no account and nothing to pay.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#download">Get Spwrite — it's free</a>
@@ -52,105 +50,83 @@
     <!-- Features -->
     <section id="features" class="section">
       <div class="container">
-        <h2>Made for long writing sessions</h2>
+        <h2>Write comfortably</h2>
         <p class="section-sub">A workspace that stays quiet and out of your way, so the words can come.</p>
         <div class="grid">
           <div class="card">
             <div class="icon">📖</div>
-            <h3>Manuscript editor</h3>
-            <p>Classic serif type, double-spaced — the same standard as a Google Docs manuscript. Easy on the eyes and easy to mark up.</p>
+            <h3>Manuscript-style page</h3>
+            <p>Book serif type, double line spacing, and a comfortable line width — easy on the eyes for long sessions.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🧘</div>
+            <h3>Focus mode</h3>
+            <p>Hide everything except the page — sidebar, title, toolbar, and panels all step aside. Press Esc to come back.</p>
           </div>
           <div class="card">
             <div class="icon">🔢</div>
-            <h3>Live word count</h3>
-            <p>A running word count sits in the upper-right of the document and updates as you type — progress you can feel.</p>
+            <h3>Word count &amp; session count</h3>
+            <p>See your total word count, plus how many words you've added since you opened the document.</p>
           </div>
           <div class="card">
-            <div class="icon">🌌</div>
-            <h3>Deep navy theme</h3>
-            <p>A dark navy workspace with dark-cyan highlights and a soft gradient backdrop, gentle for late-night drafts.</p>
-          </div>
-          <div class="card">
-            <div class="icon">🖼️</div>
-            <h3>Book-cover dashboard</h3>
-            <p>Your projects sit in a responsive grid of portrait cover cards. Give each book a cover, or keep a colorful initial badge.</p>
+            <div class="icon">✍️</div>
+            <h3>Small touches</h3>
+            <p>Formatting for bold, italic, headings, lists, and links. Type <code>---</code> for an em dash (—), and press Tab to indent a paragraph.</p>
           </div>
         </div>
 
-        <h2 style="margin-top:64px;">Everything a writer reaches for</h2>
-        <p class="section-sub">The tools that matter, and not much else.</p>
+        <h2 style="margin-top:64px;">Organize your work</h2>
+        <p class="section-sub">Keep novels, scripts, essays, and notes in order — however your mind works.</p>
         <div class="grid">
           <div class="card">
+            <div class="icon">🖼️</div>
+            <h3>Projects as book covers</h3>
+            <p>A project for each book, article, or client, shown as cover cards. Add a cover photo, or keep a colorful initial badge.</p>
+          </div>
+          <div class="card">
             <div class="icon">🗂️</div>
-            <h3>Projects &amp; folders</h3>
-            <p>Keep separate projects for different books, articles, or clients, and sort each into folders and documents.</p>
+            <h3>Folders &amp; documents</h3>
+            <p>Inside each project, group parts, chapters, and scenes into folders and documents.</p>
           </div>
           <div class="card">
             <div class="icon">✋</div>
             <h3>Drag to organize</h3>
-            <p>Grab the handle on any row to reorder. Drop a document into a folder, back out to the top level, or between folders.</p>
+            <p>Drag to reorder. Drop a document onto a folder to move it in, or back out to the top level. Rename/delete stay hidden until you long-press a row.</p>
           </div>
           <div class="card">
-            <div class="icon">🅱️</div>
-            <h3>Format as you write</h3>
-            <p>Bold, italic, headings, lists, and links. Tab drops a clean 10-space indent right where your cursor is, and your blank lines stay exactly as you left them.</p>
+            <div class="icon">💾</div>
+            <h3>Never lose a word</h3>
+            <p>Autosave kicks in a couple of seconds after you stop. A chip shows "Saving…" then "Saved" — and switching, closing, or quitting saves first.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🎭</div>
+            <h3>Keep your cast close</h3>
+            <p>The Characters panel holds each character's name, role, details, and picture, right beside your draft.</p>
           </div>
           <div class="card">
             <div class="icon">📄</div>
             <h3>Export to Word</h3>
-            <p>Send any selection of documents to a single .docx — titles become headings, formatting carries over, and each document starts on a new page.</p>
+            <p>Pick the documents you want and send them to a single <code>.docx</code> — each one starts on a new page with its title as a heading.</p>
           </div>
           <div class="card">
-            <div class="icon">🎭</div>
-            <h3>Character panel</h3>
-            <p>Keep your cast close: name, role, free-form details, and a portrait for each character, right beside your draft.</p>
-          </div>
-          <div class="card">
-            <div class="icon">💾</div>
-            <h3>Autosave</h3>
-            <p>No Save button to remember. A status pill shows "Saving…" as you type, then "Saved" once your text is safely on disk.</p>
+            <div class="icon">📘</div>
+            <h3>Built-in guides</h3>
+            <p>A read-only <strong>User Guide</strong> walks through every feature, right inside the app. Toggle the guides off any time to hide them.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- On-device AI -->
+    <!-- AI assistant — coming soon -->
     <section id="ai" class="section section-alt">
-      <div class="container">
-        <h2>A writing assistant that stays private</h2>
+      <div class="container support">
+        <span class="badge">Coming soon</span>
+        <h2>A private AI assistant, in the works</h2>
         <p class="section-sub">
-          Spwrite's AI runs a small language model <strong>on your own computer</strong>.
-          No account, no API key, no telemetry, no per-use cost — and your writing
-          never leaves your device.
-        </p>
-
-        <div class="grid">
-          <div class="card">
-            <div class="icon">🔒</div>
-            <h3>Private by design</h3>
-            <p>Chat about your draft — brainstorm, rephrase, continue a passage, or summarize. Nothing you write is ever sent anywhere.</p>
-          </div>
-          <div class="card">
-            <div class="icon">📚</div>
-            <h3>Knows your story</h3>
-            <p>Ask about your own project and the assistant answers from your documents and characters, showing which source it drew from.</p>
-          </div>
-          <div class="card">
-            <div class="icon">🔎</div>
-            <h3>Semantic search</h3>
-            <p>Search a whole manuscript by meaning, not just matching words — it finds the right passage across every chapter and book.</p>
-          </div>
-          <div class="card">
-            <div class="icon">🛜</div>
-            <h3>Offline after setup</h3>
-            <p>A one-time model download, verified for integrity, then it works with no connection at all. The app stays usable while it downloads.</p>
-          </div>
-        </div>
-
-        <p class="section-sub" style="margin-top:36px;">
-          Powered by openly licensed on-device models (Qwen2.5-1.5B-Instruct and
-          bge-small-en-v1.5, both Apache-2.0). Web research and AI image generation
-          are marked <strong>Coming soon</strong> and make no network requests today.
+          We're building a writing assistant that runs <strong>on your own computer</strong> —
+          no account, no cloud, nothing sent anywhere. It's being stabilised and isn't
+          part of this build yet, so it shows as <strong>"Coming soon"</strong> in the app
+          and makes no network requests. Everything else works fully offline today.
         </p>
       </div>
     </section>
