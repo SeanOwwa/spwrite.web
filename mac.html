@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Install Spwrite on Mac — step by step</title>
-  <meta name="description" content="A simple, no-jargon guide to installing Spwrite on your Mac: download, unzip, drag to Applications, and open." />
+  <meta name="description" content="A simple, no-jargon guide to installing Spwrite on your Mac: download, unzip, drag to Applications, and open it with Open Anyway the first time." />
   <link rel="icon" href="assets/spwrite_logo.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -96,10 +96,9 @@
             <div class="guide-num">4</div>
             <div class="guide-body">
               <h3>Open it and start writing</h3>
-              <p><strong>Double-click Spwrite.</strong> The first time only, macOS may
-                say it "can't be opened because it is from an unidentified developer."
-                That's normal for an app installed this way — see the tip just below to
-                open it in two clicks.</p>
+              <p><strong>Double-click Spwrite.</strong> The first time only, macOS says
+                <em>"Apple could not verify Spwrite is free of malware."</em> That's
+                normal. Follow the short steps just below once, and you're done.</p>
             </div>
           </div>
         </div>
@@ -110,19 +109,27 @@
     <section class="section section-alt">
       <div class="container">
         <div class="open-guide">
-          <h3>If macOS blocks the first open</h3>
+          <h3>Opening Spwrite the first time</h3>
           <ol class="open-steps">
-            <li><strong>Right-click</strong> (or hold <em>Control</em> and click) the
-              <strong>Spwrite</strong> app.</li>
-            <li>Choose <strong>Open</strong> from the menu.</li>
-            <li>In the box that appears, click <strong>Open</strong> again.</li>
-            <li>You only do this once. After that, Spwrite opens with a normal
-              double-click.</li>
+            <li>When the warning appears, click <strong>Done</strong>.</li>
+            <li>Open <strong>System Settings</strong> (the gear icon in the Dock, or
+              <em>Apple menu → System Settings</em>).</li>
+            <li>Click <strong>Privacy &amp; Security</strong> in the sidebar, then
+              scroll down to the <strong>Security</strong> section.</li>
+            <li>Next to <em>"Spwrite" was blocked</em>, click
+              <strong>Open Anyway</strong>.</li>
+            <li>Enter your Mac password (or use Touch ID), then click
+              <strong>Open Anyway</strong> once more.</li>
           </ol>
           <p class="tip-note">
-            This happens because the app isn't signed with a paid Apple Developer
-            certificate — it's safe, it just hasn't paid Apple's toll. Right-click →
-            Open tells your Mac you trust it.
+            <strong>You only do this once.</strong> After that, Spwrite opens with a
+            normal double-click, even after you update it.
+          </p>
+          <p class="tip-note">
+            <strong>Why does this happen?</strong> Spwrite is a free beta, and it isn't
+            signed with Apple's paid ($99/year) developer certificate. The app is safe.
+            macOS shows this message for every unsigned app, and many free and
+            open-source Mac apps work the same way.
           </p>
         </div>
       </div>
@@ -141,6 +148,14 @@
           <div class="faq-item">
             <h3>Do I need to install anything else?</h3>
             <p>No. This is the ready-to-run app — just download, drag, and open.</p>
+          </div>
+          <div class="faq-item">
+            <h3>I don't see "Open Anyway"</h3>
+            <p>Try to open Spwrite once first, so the warning appears. The button then
+              shows in <em>Privacy &amp; Security</em> for about an hour. If you're
+              comfortable with Terminal, you can also run
+              <code>xattr -dr com.apple.quarantine /Applications/Spwrite.app</code>
+              and then double-click Spwrite.</p>
           </div>
           <div class="faq-item">
             <h3>How do I remove it?</h3>
