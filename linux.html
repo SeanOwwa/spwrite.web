@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Install Spwrite on Linux — step by step</title>
-  <meta name="description" content="A simple, no-jargon guide to installing Spwrite on Linux (ARM64): download, extract, make it executable, and start writing." />
+  <meta name="description" content="A simple, no-jargon guide to installing Spwrite on Linux (ARM64 and x64): download, extract, make it executable, and start writing." />
   <link rel="icon" href="assets/spwrite_logo.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -32,19 +32,29 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
-        <span class="badge">Linux · Debian-based · ARM64<span class="beta-tag" data-platform-version="linux">Beta v1.3.6</span></span>
+        <span class="badge">Linux · Debian-based · ARM64 &amp; x64<span class="beta-tag" data-platform-version="linux">Beta v1.3.6</span></span>
         <h1>Install Spwrite<br />on Linux</h1>
         <p class="lead">
-          No package manager, no accounts, nothing technical. Download one file,
-          unzip it, and run the app. Takes about a minute.
+          No package manager, no accounts, nothing technical. Pick your chip,
+          download, unzip, and run the app. Takes about a minute.
         </p>
         <div class="hero-actions" data-release="linux">
           <a class="btn btn-primary dl-btn"
              href="downloads/Spwrite-Linux-v1.3.6.zip"
-             download="Spwrite-Linux-v1.3.6.zip">⬇ Download Spwrite for Linux</a>
+             download="Spwrite-Linux-v1.3.6.zip">⬇ Download for ARM64</a>
+          <div class="dl-meta dl-meta-center"></div>
+        </div>
+        <div class="hero-actions" data-release="linux-x64" style="margin-top:12px;">
+          <a class="btn btn-ghost dl-btn"
+             href="downloads/Spwrite-Linux-x64-v1.3.6.zip"
+             download="Spwrite-Linux-x64-v1.3.6.zip">⬇ Download for x64 (Intel/AMD)</a>
           <div class="dl-meta dl-meta-center"></div>
         </div>
         <p class="detected">Free · Works offline · Everything saves on your machine</p>
+        <p class="detected" style="margin-top:6px;">Not sure? Most PCs and servers are
+          <strong>x64</strong>; Raspberry Pi and ARM machines are <strong>ARM64</strong>.
+          Run <code>uname -m</code> — <code>aarch64</code> means ARM64,
+          <code>x86_64</code> means x64.</p>
       </div>
     </section>
 
@@ -52,7 +62,7 @@
     <section class="section">
       <div class="container">
         <h2>Four simple steps</h2>
-        <p class="section-sub">Built on <strong>Debian (ARM64)</strong>, and runs on most modern GTK-based desktops. Follow along in order — it's quick.</p>
+        <p class="section-sub">Built on <strong>Debian</strong> for both <strong>ARM64</strong> and <strong>x64</strong>, and runs on most modern GTK-based desktops. Follow along in order — it's quick.</p>
 
         <div class="guide-steps">
           <div class="guide-step">
@@ -142,14 +152,17 @@
         <div class="faq">
           <div class="faq-item">
             <h3>Which Linux does this run on?</h3>
-            <p>It's built on <strong>Debian (ARM64)</strong>, but it's a standard Flutter
-              desktop app, not a <code>.deb</code> — so it also runs on most other modern
-              <strong>ARM64</strong> desktops like <strong>Ubuntu</strong> and
-              <strong>Fedora</strong>, as long as <strong>GTK 3</strong> is installed. If it
-              won't start, that's almost always a missing GTK 3 (install it with your
-              distro's package manager, e.g. <code>sudo dnf install gtk3</code> on Fedora or
-              <code>sudo apt install libgtk-3-0</code> on Debian/Ubuntu) or a very old system
-              library. It targets ARM64 machines, not Intel/AMD x86.</p>
+            <p>It's built on <strong>Debian</strong> and comes in two builds —
+              <strong>ARM64</strong> (aarch64, e.g. Raspberry Pi and ARM machines) and
+              <strong>x64</strong> (x86_64, most PCs and servers). It's a standard Flutter
+              desktop app, not a <code>.deb</code>, so it also runs on most other modern
+              desktops like <strong>Ubuntu</strong> and <strong>Fedora</strong>, as long as
+              <strong>GTK 3</strong> is installed. If it won't start, that's almost always a
+              missing GTK 3 (install it with your distro's package manager, e.g.
+              <code>sudo dnf install gtk3</code> on Fedora or
+              <code>sudo apt install libgtk-3-0</code> on Debian/Ubuntu). Not sure which
+              build? Run <code>uname -m</code>: <code>aarch64</code> → ARM64,
+              <code>x86_64</code> → x64.</p>
           </div>
           <div class="faq-item">
             <h3>Where is my writing saved?</h3>
